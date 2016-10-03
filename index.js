@@ -8,7 +8,7 @@ var app = express();
 // Config cloudinary storage for multer-storage-cloudinary
 var storage = cloudinaryStorage({
   cloudinary: cloudinary,
-  folder: 'someklone',
+  folder: '',
   allowedFormats: ['jpg', 'png'],
 });
 
