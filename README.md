@@ -6,7 +6,7 @@ Project uses the multer middleware to receive images in a POST request. Addition
 
 The project assumes that you have a Heroku app with Cloudinary add-on configured for the app.
 
-Notice that this example also has a client counterpart.
+Notice that this example also has a client counterpart here https://github.com/lassehav-oamk/image-upload-example-client.
 
 ## Installation
 
