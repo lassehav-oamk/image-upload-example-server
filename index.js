@@ -8,7 +8,7 @@ var app = express();
 // Config cloudinary storage for multer-storage-cloudinary
 var storage = cloudinaryStorage({
   cloudinary: cloudinary,
-  folder: '',
+  folder: '', // give cloudinary folder where you want to store images
   allowedFormats: ['jpg', 'png'],
 });
 
@@ -22,6 +22,9 @@ app.get('/', function(req, res) {
     res.send("Hello world");
 });
 
+// POST route for reciving the uploads. multer-parser will handle the incoming data based on the 'image' key
+// Once multer has completed the upload to cloudinary, it will come to the handling function
+// below, which then sends the 201 (CREATED) response. Notice that error handling has not been properly implemented.
 app.post('/upload', parser.single('image'), function (req, res) {       
     console.log(req.file);
     res.sendStatus(201);
