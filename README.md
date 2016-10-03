@@ -10,14 +10,14 @@ Notice that this example also has a client counterpart.
 
 ## Installation
 
--Create new heroku app
--Add "Cloudinary" addon to your app
--Clone this project example
--Load the npm dependencies with 
-  -'npm install' command
--Use Heroku CLI to login to the app with
-  -'heroku login' command
--Follow the deploy instructions in your Heroku app to how to deploy the app. 
-  -For example: 'heroku git:remote -a image-upload-example-server' and 'git push heroku master'
+- Create new heroku app
+- Add "Cloudinary" addon to your app
+- Clone this project example
+- Load the npm dependencies with 
+  - 'npm install' command
+- Use Heroku CLI to login to the app with
+  - 'heroku login' command
+- Follow the deploy instructions in your Heroku app to how to deploy the app. 
+  - For example: 'heroku git:remote -a image-upload-example-server' and 'git push heroku master'
 
     
