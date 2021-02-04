@@ -13,7 +13,7 @@ var storage = cloudinaryStorage({
 });
 
 var parser = multer({ storage: storage });
-        
+
 // You can store key-value pairs in express, here we store the port setting
 app.set('port', (process.env.PORT || 80));
 
@@ -25,9 +25,10 @@ app.get('/', function(req, res) {
 // POST route for reciving the uploads. multer-parser will handle the incoming data based on the 'image' key
 // Once multer has completed the upload to cloudinary, it will come to the handling function
 // below, which then sends the 201 (CREATED) response. Notice that error handling has not been properly implemented.
-app.post('/upload', parser.single('image'), function (req, res) {       
+app.post('/upload', parser.single('image'), function (req, res) {
     console.log(req.file);
-    res.sendStatus(201);
+    res.status(201);
+    res.json(req.file);
 });
 
 // start listening for incoming HTTP connections
