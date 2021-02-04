@@ -13,5 +13,8 @@
     "express": "^4.14.0",
     "multer": "^1.2.0",
     "multer-storage-cloudinary": "^1.2.1"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
