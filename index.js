@@ -9,9 +9,7 @@ var app = express();
 var storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
-    folder: '',
-    //format: async (req, file) => 'png', // supports promises as well
-    //public_id: (req, file) => 'computed-filename-using-request',
+    folder: ''
   },
 });
 
