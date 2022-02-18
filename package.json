@@ -1,5 +1,5 @@
 {
-  "name": "ionic-camera-upload-example-server",
+  "name": "image-upload-example-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,10 +11,10 @@
   "dependencies": {
     "cloudinary": "^1.4.3",
     "express": "^4.14.0",
-    "multer": "^1.2.0",
-    "multer-storage-cloudinary": "^1.2.1"
+    "multer": "^1.4.4",
+    "multer-storage-cloudinary": "^4.0.0"
   },
   "engines": {
-    "node": "12.x"
+    "node": "16.x"
   }
 }

@@ -1,15 +1,18 @@
-var cloudinary = require('cloudinary');
-var cloudinaryStorage = require('multer-storage-cloudinary');
+var cloudinary = require('cloudinary').v2;
+var { CloudinaryStorage } = require('multer-storage-cloudinary');
 var express = require('express');
 var multer = require('multer');
 
 var app = express();
 
 // Config cloudinary storage for multer-storage-cloudinary
-var storage = cloudinaryStorage({
+var storage = new CloudinaryStorage({
   cloudinary: cloudinary,
-  folder: '', // give cloudinary folder where you want to store images
-  allowedFormats: ['jpg', 'png'],
+  params: {
+    folder: '',
+    //format: async (req, file) => 'png', // supports promises as well
+    //public_id: (req, file) => 'computed-filename-using-request',
+  },
 });
 
 var parser = multer({ storage: storage });
